@@ -1,2 +1,2 @@
-# ambula-react-assignment
+# Ambula-react-assignment
 This repo contains ambula-career react-assignment
