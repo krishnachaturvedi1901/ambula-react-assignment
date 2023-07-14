@@ -1,0 +1,24 @@
+.navbarMainDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkslategrey;
+  color: whitesmoke;
+}
+.navLinkDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.navLinkDiv>a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+#todoShopDiv {
+  width: 10%;
+  margin-left: 20px;
+}
+#homeAboutContactCartDiv {
+  width: 30%;
+  margin-right: 20px;
+}
