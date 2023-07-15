@@ -1,7 +1,7 @@
 # Ambula-react-assignment
 This repo contains ambula-career react-assignment
 
-[Deployed link-Netlify](https://ambula-reactjs-assignment.netlify.app/todos) 
+[Deployed link-Netlify](https://ambula-reactjs-assignment.netlify.app) 
 
 [Deployed server link-Cyclic](https://doubtful-clothes-pike.cyclic.app/)
 
