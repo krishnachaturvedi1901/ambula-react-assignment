@@ -1,0 +1,113 @@
+.signupAmdImgTopDiv{
+    padding-top: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.signupMainDiv>h5{
+    color: rgb(255, 136, 0);
+    margin: 0px;
+    padding: 0px;
+}
+.signupMainDiv{
+    width: 60%;
+    text-align: start;
+    padding: 0px 20px;
+}
+.hrLineDiv{
+    width: 80%;
+}
+#passwordErrorPTag{
+    color: red;
+}
+.signupMainDiv>form>input{
+    display: block;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+.signupMainDiv>form>input:focus{
+    outline: none;
+    border-color: rgb(65, 109, 109);
+}
+
+.passwordInputDiv{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    width: 70%;
+}
+.passwordInputDiv>input{
+    padding: 8px;
+    width: 100%;
+
+}
+.showPassEyeDiv{
+    position: absolute;
+    top: 6px;
+    left: 95%;
+}
+.infoIconDiv{
+    position: absolute;
+    top: 6px;
+    left: 103%;
+}
+.passInfoDiv{
+    position: absolute;
+    top: 6px;
+    left: 108%;
+    border: 1px solid brown;
+    background-color: antiquewhite;
+    width: 170px;
+    height: 150px;
+    padding: 5px;
+}
+#signupBtn{
+    width: 73%;
+    font-size: 15px;
+    padding: 8px 20px;
+    margin: 20px 0px;
+    cursor: pointer;
+    background-color: rgb(65, 109, 109);
+    color: whitesmoke;
+    border: none;
+}
+#signupBtn:hover{
+    background-color: darkslategray;
+    opacity: 1;
+}
+
+
+@media screen and (max-width:760px) {
+    .signupAmdImgTopDiv{
+        padding-top: 60px;
+        display: block;
+    }
+    
+    .signupMainDiv{
+        width: 100%;
+        text-align: start;
+        padding: 0px 20px;
+    }   
+    .passInfoDiv{
+        position: absolute;
+        top: 80%;
+        left: 60%;
+        z-index:1;    
+        width: 100px;
+        height: 140px;
+        padding: 5px;
+    }
+    .passInfoDiv>p{
+        font-size: 12px;
+    }
+    .showPassEyeDiv{
+        position: absolute;
+        top: 6px;
+        left: 88%;
+    }
+    
+}

@@ -14,6 +14,9 @@
     text-decoration: none;
     color: whitesmoke;
 }
+.navLinkDiv>a:hover{
+ color:chocolate
+}
 #todoShopDiv {
   width: 10%;
   margin-left: 20px;

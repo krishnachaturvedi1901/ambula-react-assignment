@@ -26,6 +26,9 @@ const Navbar = () => {
         <Link to="/contact" >
           <h3>Contact</h3>
         </Link>
+        <Link to="/signup" >
+          <h3>Signup</h3>
+        </Link>
         <Link to="/cart" >
           <div>
             <BsCartCheck size={30} />

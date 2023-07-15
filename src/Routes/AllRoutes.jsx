@@ -7,6 +7,7 @@ import Contact from '../Pages/Contact'
 import Todos from '../Pages/Todos'
 import Shop from '../Pages/Shop'
 import Cart from '../Pages/Cart'
+import Signup from '../Pages/Signup'
 
 const AllRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AllRoutes = () => {
             <Route  path='/todos' element={<Todos/>} />
             <Route  path='/shop' element={<Shop/>} />
             <Route  path='/cart' element={<Cart/>} />
+            <Route  path='/signup' element={<Signup/>} />
         </Route>
     </Routes>
   )

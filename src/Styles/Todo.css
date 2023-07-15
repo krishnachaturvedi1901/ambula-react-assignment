@@ -18,6 +18,10 @@
   height: 300px;
   overflow-y: scroll;
 }
+.allTodoDiv::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
 
 .todoItemDiv {
   display: flex;
