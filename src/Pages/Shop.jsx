@@ -19,7 +19,7 @@ const Shop = () => {
       .then((res) => {
         setProducts(res.data);
         if(res.data=''||[]||undefined){
-          AlertFunction('Error in API')
+          console.log("Error in api")
         }
       })
       .catch(() => {
