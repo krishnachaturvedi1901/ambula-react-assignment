@@ -1,15 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import { TodoItem } from "./TodoItem";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getTodos } from "../../Redux/TodoReduxState/actions";
 const TodoList = () => {
 const dispatch=useDispatch()
+const [todosArr,setTodosArr]=useState([])
  const {loading , todos, error}=useSelector((state)=>state.todoState)
 
 
  useEffect(()=>{
     dispatch(getTodos())
  },[])
+
+ useEffect(()=>{
+  setTodosArr(todos)
+ },[todos])
 
  if(loading){
     return (
@@ -23,7 +28,7 @@ const dispatch=useDispatch()
  }
   return (
     <div className="allTodoDiv">
-      {todos.reverse().map((elem) => {
+      {todosArr.reverse().map((elem) => {
         return (
           <TodoItem
             key={elem.id}

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteFromCartFunction,
@@ -11,14 +11,19 @@ import { AlertContext } from "../Context/AlertContext";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const [cartArr,setCartArr]=useState([])
   const {alert,alertMessage,AlertFunction}=useContext(AlertContext)
   const { getAllCartLoading, getAllCartSuccess, getAllCartError } = useSelector(
     (state) => state.getAllCartProductsState
   );
 
-  useEffect(() => {
+  useEffect(()=>{
     dispatch(getAllProductsFromCartFunction());
-  }, []);
+  },[])
+  
+  useEffect(() => {
+    setCartArr(getAllCartSuccess)
+  }, [getAllCartSuccess]);
 
   const findTotalQuantities = () => {
     const totalQuantity = getAllCartSuccess.reduce((acc, item) => {
@@ -51,8 +56,8 @@ const Cart = () => {
           </p>
         </div>
         <div className={styles.allCartProdDiv}>
-          {getAllCartSuccess ? (
-            getAllCartSuccess.map((prod) => {
+          {cartArr ? (
+            cartArr.map((prod) => {
               return (
                 <div className={styles.oneCartProdDiv}>
                   <img id={styles.cartImgId} src={prod.image} />

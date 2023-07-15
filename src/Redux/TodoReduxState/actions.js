@@ -35,6 +35,7 @@ export const addTodos=(data)=>(dispatch)=>{
   })
   .catch((err)=>{
     console.log("Error in adding todo",err)
+    dispatch(getTodos())
   })
 }
 
@@ -45,6 +46,7 @@ export const updateTodos=({id,status})=>(dispatch)=>{
   })
   .catch((err)=>{
     console.log("Error in update todo",err)
+    dispatch(getTodos())
   })
 
 }
@@ -55,6 +57,7 @@ export const deleteTodos=(id)=>(dispatch)=>{
     })
     .catch((err)=>{
       console.log("Error in delete todo",err)
+      dispatch(getTodos())
     })
   
   }

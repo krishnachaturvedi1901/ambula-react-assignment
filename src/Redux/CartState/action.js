@@ -64,6 +64,7 @@ export const updateInCartFunction=({cartId,quantity,totalPrice})=>(dispatch)=>{
   })
   .catch((err)=>{
     console.log("error after updateInCart",err)
+    dispatch(getAllProductsFromCartFunction())
     dispatch(addToCartError())
   })
 
@@ -79,6 +80,10 @@ export const addToCartFunction=(product)=>(dispatch)=>{
       })
       .catch((err)=>{
         console.log("error after addToCart",err)
+        dispatch(getAllProductsFromCartFunction())
+        // Why iam adding this here becz iam getting cors error from cyclic server and execution going in error but our request executes on server but cyclic not 
+        // sending Access-control-allow-origin with my site name every time some time it is senbding but some times it is not so when ever it not sending for that 
+        // condiotion iwant to fetch the updated db from cyuclic so iam adding this action in errror.
         dispatch(addToCartError())
       })
 }
@@ -102,6 +107,7 @@ export const deleteFromCartFunction=({cartId})=>(dispatch)=>{
         console.log(" res after deleteProductfromCart-",result)
         dispatch(getAllProductsFromCartFunction())
     }).catch((err) => {
+        dispatch(getAllProductsFromCartFunction())
         console.log("error after deleteproductfromCart function",err)
     });
 

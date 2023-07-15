@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 const Todos = () => {
   const { loading, todos, error } = useSelector((state) => state.todoState);
+  
   const countCompletedTasks = () => {
     let count = 0;
     todos.filter((todo) => {
