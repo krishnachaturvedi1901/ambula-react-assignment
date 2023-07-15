@@ -25,3 +25,50 @@
   width: 30%;
   margin-right: 20px;
 }
+/* ---------------------------Css form mobile view ---------- */
+.navbarMobileMainDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkslategrey;
+  color: whitesmoke;
+  position: relative;
+  padding: 10px;
+  z-index: 2;
+}
+.navbarMobileMainDiv>a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.navbarMobileMainDiv>a:hover{
+  color: chocolate;
+}
+.dropdownIconDiv{
+  width: 70%;
+}
+.dropdownIconDiv:hover{
+  color: chocolate;
+}
+.dropdownDiv>a{
+  text-decoration: none;
+  color: whitesmoke;
+  
+}
+.dropdownDiv>a:hover{
+  color: chocolate;
+}
+.dropdownDiv{
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  background-color: rgb(51, 105, 105,0.8);
+  top: 46px;
+  left: 0px;
+  text-align: center;
+  z-index: -1;
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dropdownDiv>a>h3{
+  margin: opx;
+}
