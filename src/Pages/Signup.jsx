@@ -98,7 +98,7 @@ const Signup = () => {
             {passwordMatchError ? "*Password not match" : null}
             {mobileInputError ? "*Please enter 10 digit mobile no. only" : null}
             {!isValidPassword
-              ? "*Please enter password containing [a-zA-Z0-9$#@!%$][8-12 length]"
+              ? "*Please enter password containing [a-zA-Z0-9$#@!%*^][8-12 length]"
               : null}
           </p>
           <label>First name:</label>
